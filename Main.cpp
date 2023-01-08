@@ -18,7 +18,6 @@
 #include "Simplify.h"
 #include <stdio.h>
 #include <iostream>
-#include <filesystem>
 #include <time.h>  // clock_t, clock, CLOCKS_PER_SEC
 
 void showHelp(const char* argv[]) {
@@ -120,8 +119,6 @@ int main(int argc, const char* argv[]) {
     simplify(argc, argv);
 #else
 int main() {
-    std::cout << "Work Path " << std::filesystem::current_path() << "\n";
-
     for (int i = 0; i < 3; ++i)
     {
         int quad_node_cnt = 1 << i;
